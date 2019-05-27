@@ -4,14 +4,14 @@
   "description": "Landing page for komo academy learning hub",
   "main": "index.js",
   "scripts": {
-      "watch:sass": "node-sass sass/main.scss css/style.css -w",
+      "watch:sass": "node-sass landing/sass/main.scss landing/css/style.css -w",
       "devserver": "live-server",
       "start": "npm-run-all parallel devserver watch:sass",
       
-      "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-      "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
-      "prefix:css": "postcss --use autoprefixer -b 'last 10 version' css/style.concat.css -o css/style.prefixer.css",
-      "compress:css": "node-sass css/style.prefixer.css css/style.css --output-style compressed",
+      "compile:sass": "node-sass landing/sass/main.scss landing/css/style.comp.css",
+      "concat:css": "concat -o landing/css/style.concat.css landing/css/icon-font.css landing/css/style.comp.css",
+      "prefix:css": "postcss --use autoprefixer -b 'last 10 version' landing/css/style.concat.css -o landing/css/style.prefixer.css",
+      "compress:css": "node-sass landing/css/style.prefixer.css landing/css/style.css --output-style compressed",
       "build:css": "npm-run-all compile:sass concat:css prefixer:css compress:css"
   },
   "repository": {
